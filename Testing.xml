@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Page Object test example">
+
+
+
+<test name="Login with valid ">
+
+
+<classes>
+
+
+<!-- MWS -->
+
+<class name="test.TestCases"/>
+
+</classes>
+
+</test>
+
+</suite>
