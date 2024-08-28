@@ -21,15 +21,15 @@ public class TestCases extends TestBase{
 
 	// login with valid username and password
 
-	@Test(priority =25)
+	@Test(priority =26)
 	public void loginWithValid() throws InterruptedException 
 	{		
-		Thread.sleep(3000);
+		
 		l.cleanbothfield();
 		l.enterUserName(Constant.USERNAME);
 		l.enterPassword(Constant.PASSWORD);
 		l.clickLoginbtn();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Assert.assertEquals(l.currentUrl(),Constant.DASBOARD," checking the url" );
 
 	}
@@ -132,7 +132,16 @@ public class TestCases extends TestBase{
 	{
 		l.cleanbothfield();
 		l.enterPassword("1234567");
-		Assert.assertEquals(l.inDottedFormat(),"password");
+		Assert.assertEquals(l.inupassFormat("type"),"password");
+		
+	}
+	
+	@Test(priority =25)
+	public void checkUserFieldInText()
+	{
+		l.cleanbothfield();
+		l.enterUserName("abcdefghijklmnopq");
+		Assert.assertEquals(l.inuserFormat("type"), "text");
 		
 	}
 

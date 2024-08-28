@@ -16,9 +16,13 @@ public class TestBase {
 	@BeforeSuite
     public void setup()
     {
-		driver = new ChromeDriver();
-		driver.get(Constant.BASE_URL);
-		driver.manage().window().maximize();
+		
+		  driver = new ChromeDriver(); driver.get(Constant.BASE_URL);
+		  driver.manage().window().maximize();
+		 
+		
+		
+		//Framework.intiDriver("chrome", Constant.BASE_URL);
 	 
 		System.out.print(" WeDriver Insilizer ");
    }

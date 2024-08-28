@@ -222,10 +222,16 @@ public class Login {
 		return driver.findElement(clickLogin).isSelected();
 	}
 	
-	public String inDottedFormat()
+	public String inuserFormat(String format)
 	{
-		return driver.findElement(pass).getAttribute("type");
+		return driver.findElement(uname).getAttribute(format);
 	}
+
+	public String inupassFormat(String format)
+	{
+		return driver.findElement(pass).getAttribute(format);
+	}
+
 }
 
 

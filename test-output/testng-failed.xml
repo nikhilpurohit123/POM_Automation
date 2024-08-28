@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Page Object test example]">
+<suite name="Failed suite [Page Object test example]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Login with valid (failed)">
     <classes>
-      <class name="test.TestCases">
+      <class name="test.DashboardTest">
         <methods>
           <include name="close"/>
-          <include name="initDriver"/>
-          <include name="loginWithValid"/>
+          <include name="init"/>
+          <include name="checkSideNavTxt"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- test.TestCases -->
+      </class> <!-- test.DashboardTest -->
     </classes>
   </test> <!-- Login with valid (failed) -->
 </suite> <!-- Failed suite [Page Object test example] -->
