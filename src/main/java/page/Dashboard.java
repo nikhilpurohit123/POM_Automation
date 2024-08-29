@@ -16,14 +16,20 @@ public class Dashboard {
 	
 	
 	private By  menubtn =By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");
-	private By gdrop = By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");
+	
 	private By glivepanel = By.xpath("//div[@class='navbar-custom ']//div[2]//a[1]");
 	private By gtestpanel = By.xpath("//div[@class='row g-0']//div[1]");
-	private By slogo = By.xpath("//img[@class='rounded-circle']");
-	private By arrimg = By.xpath("//i[@class='mdi mdi-chevron-down']");
-	private By logout = By.xpath("//a[@class='dropdown-item notify-item p-2 bs-2']");
-	private By logoutimg = By.xpath("//i[@class='fe-log-out me-1']");
+	private By inlogoimg = By.xpath("//i[@class='fe-log-out me-1']");// in logout link near logo 
+	private By arrimg = By.xpath("//i[@class='mdi mdi-chevron-down']");// near arrow of ghost icon 
+	private By logout = By.xpath("//a[@class='dropdown-item notify-item p-2 bs-2']");// real logout link 
+	private By logoutimg = By.xpath("//img[@class='rounded-circle']");// small ghost logo in logout
 	private By heading = By.xpath("//h4[normalize-space()='Dashboard']");
+	private By logoutlink = By.xpath("//a[@id='dropdown-profile']"); // logout image link of small ghost icon               
+
+	private By cat = By.xpath("//a[@id='dropdown-apps']");// category icon 
+	
+	
+	
 	
 	// this is all blog image in dashbord 
 	private By imgA = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
@@ -89,10 +95,14 @@ public class Dashboard {
 	{
 		return driver.findElement(menubtn).isDisplayed();
 	}
+	
+	
 	public boolean menuEnable()
 	{
 		return driver.findElement(menubtn).isEnabled();
 	}
+	
+	
 	public void clickMenu()
 	{
 		click(menubtn);
@@ -104,4 +114,120 @@ public class Dashboard {
 	}
 	
 	
+	public void selectTestPannel()
+	{
+		click(gtestpanel);	
+	}
+	
+	public void selectLivePannel()
+	{
+		click(gtestpanel);
+	}
+	public void back()
+	{
+		driver.navigate().back();
+	}
+	
+	
+	public boolean roundlogimg()// small round ghost logo
+	{
+		 return driver.findElement(logoutimg).isDisplayed();
+		
+	}
+	public void roundloginClick()
+	{
+		click(logoutimg);
+	}
+	
+	public boolean logimgEna()// small round ghost logo
+	{
+		 return driver.findElement(logoutimg).isEnabled();
+		
+	}
+	
+	
+	public boolean categoryimg()// test pannel cantain  image
+	{
+		return driver.findElement(cat).isDisplayed();	
+		
+	}
+	
+	public boolean catimgEnabled()// test pannel cantain  image uper logo
+	{
+		return driver.findElement(cat).isEnabled();
+		
+	}
+	
+	
+	public void clickLogout() 
+	{
+		click(logoutlink);		
+		click(logout);
+		
+	}
+	
+	
+	public boolean logoutImg()// in logout block image 
+	{
+		return driver.findElement(inlogoimg).isDisplayed();
+	}
+	
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	public String returntxt(By d)
+	{
+		return driver.findElement(d).getText();
+	}
+	
+	
+	
+	public String getAnnTxt()
+	{
+		return returntxt(Ann);
+	}
+	
+	public String getRomTxt()
+	{
+		return returntxt(Rom);
+	}
+	
+	public String getFaqTxt()
+	{
+		return returntxt(faq);
+		
+	}
+	
+	public String getmanTxt()
+	{
+		
+		return returntxt(man);
+	}
+	
+	
+	 
+	public boolean  annImgVisible()
+	{
+		return driver.findElement(imgA).isDisplayed();
+		
+	}
+	
+	public boolean romImgVisible()
+	{
+		return driver.findElement(imgR).isDisplayed();
+	}
+	
+	public boolean faqImgVisible()
+	{
+		return driver.findElement(imgF).isDisplayed();
+	}
+		
+	public boolean manImgVisible()
+	{
+		return driver.findElement(imgM).isDisplayed();
+	}
 }
+	
+	
+

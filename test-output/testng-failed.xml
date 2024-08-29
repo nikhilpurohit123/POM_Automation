@@ -7,8 +7,8 @@
         <methods>
           <include name="close"/>
           <include name="init"/>
-          <include name="checkSideNavTxt"/>
           <include name="setup"/>
+          <include name="Logout"/>
         </methods>
       </class> <!-- test.DashboardTest -->
     </classes>

@@ -26,8 +26,9 @@ public class DashboardTest extends TestBase{
 		l.enterUserName(Constant.USERNAME);
 		l.enterPassword(Constant.PASSWORD);
 		l.clickLoginbtn();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
+	
 	
 	
 	@Test(priority =1)
@@ -73,4 +74,122 @@ public class DashboardTest extends TestBase{
 	}
 	
 	
+	
+	  @Test(enabled=false)
+	  public void changePannel()
+	  {
+		  d.selectTestPannel();
+	   //  Assert.assertEquals(d.currurl(), Constant.Test);
+	  
+	  }
+	
+	
+	@Test(enabled=false)
+	public void goLivePannel()
+	{
+		d.selectLivePannel();
+	//	Assert.assertEquals(d.currurl(), Constant.LIVEP);
+		
+		
+	}
+	
+	@Test(priority = 7)
+	public void categotyBoxVisible()
+	{
+		Assert.assertTrue(d.categoryimg(), "check the category");
+		
+	}
+	
+	@Test(priority = 8)
+	public void categoryBoxEna()
+	{
+		Assert.assertTrue(d.catimgEnabled(), "check the category img is clickable");
+	}
+	
+	
+	
+	
+	@Test(priority = 9)
+	public void logoutImgVisible()
+	{
+		d.roundloginClick();
+		Assert.assertTrue(d.logoutImg(),"check the logout image");
+	}
+
+	
+	
+	@Test(priority = 10)
+	public void logoutimgEnabled()
+	{
+		Assert.assertTrue(d.logimgEna(), "check the img is clickabled or not");
+	}
+	
+	
+	
+	@Test(priority = 21)
+	public void Logout() 
+	{		
+		d.clickLogout();		
+	}
+	
+	
+	@Test(priority = 20)
+	public void checkLogoutImg()
+	{
+		Assert.assertTrue(d.logoutImg(), "checking the logut icon in the logout block");
+		
+	}
+	
+	
+	
+	@Test(priority = 12)
+	public void  annblogTxtinScreen()
+	{
+		Assert.assertEquals(d.getAnnTxt(), "Announcements");
+	}
+	
+	@Test(priority = 13)
+	public void manblogTxtinScreen()
+	{
+		Assert.assertEquals(d.getmanTxt(), "Manuals");
+	}
+	
+	
+	@Test(priority = 14)
+	public void faqbloginTxtScreen()
+	{
+		Assert.assertEquals(d.getFaqTxt(), "FAQs");
+	}
+	
+	@Test(priority = 15)
+	public void rombloginTxtScreen()
+	{
+		Assert.assertEquals(d.getRomTxt(), "Roaming Countries");
+	}
+	
+	@Test(priority = 16)
+	public void annImageMatch()
+	{
+		Assert.assertTrue(d.annImgVisible(), "check the in dasboard announcement blog contain the icon");
+	}
+	
+	@Test(priority = 17)
+	public void romImageMatch()
+	{
+		Assert.assertTrue(d.romImgVisible(), "check the in dasboard romaning countries blog contain the icon");
+	}
+	
+	@Test(priority = 18)
+	public void faqImageMatch()
+	{
+		Assert.assertTrue(d.faqImgVisible(), "check the in dasboard faq blog contain the icon");
+	}
+	
+	@Test(priority = 19)
+	public void manImageMatch()
+	{
+		Assert.assertTrue(d.manImgVisible(), "check the in dasboard manual blog contain the icon");
+	}
+
+
 }
