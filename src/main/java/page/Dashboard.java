@@ -11,12 +11,8 @@ public class Dashboard {
 	
 	WebDriver driver;
 	
-	private By logo = By.xpath("//a[@class='logo logo-light text-center']//span[@class='logo-lg']");
-	
-	
-	
-	private By  menubtn =By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");
-	
+	private By logo = By.xpath("//a[@class='logo logo-light text-center']//span[@class='logo-lg']");	
+	private By  menubtn =By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");	
 	private By glivepanel = By.xpath("//div[@class='navbar-custom ']//div[2]//a[1]");
 	private By gtestpanel = By.xpath("//div[@class='row g-0']//div[1]");
 	private By inlogoimg = By.xpath("//i[@class='fe-log-out me-1']");// in logout link near logo 
@@ -24,12 +20,12 @@ public class Dashboard {
 	private By logout = By.xpath("//a[@class='dropdown-item notify-item p-2 bs-2']");// real logout link 
 	private By logoutimg = By.xpath("//img[@class='rounded-circle']");// small ghost logo in logout
 	private By heading = By.xpath("//h4[normalize-space()='Dashboard']");
-	private By logoutlink = By.xpath("//a[@id='dropdown-profile']"); // logout image link of small ghost icon               
+	private By logoutlink = By.xpath("//a[@id='dropdown-profile']"); // logout image link of small ghost icon         
 
 	private By cat = By.xpath("//a[@id='dropdown-apps']");// category icon 
 	
-	
-	
+	private By foot = By.xpath("//div[@class='col-md-6']");
+	private By glink= By.xpath("//a[normalize-space()='Ghost']");
 	
 	// this is all blog image in dashbord 
 	private By imgA = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
@@ -56,6 +52,15 @@ public class Dashboard {
 	private By mancat = By.xpath("//a[@data-menu-key='manualcategory']");
 	private By manu = By.xpath("//a[@data-menu-key='manual']");
 	private By shor = By.xpath("//a[@data-menu-key='shortcuts']");
+	
+	
+	// blog conatainns the count number in it
+	private By anncount = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
+	private By roaming = By.xpath( "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
+	private By faqs = By.xpath(    "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
+	private By manual = By.xpath(  "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
+	
+	
 	
 	
 	// group of side nav
@@ -226,6 +231,174 @@ public class Dashboard {
 	public boolean manImgVisible()
 	{
 		return driver.findElement(imgM).isDisplayed();
+	}
+	
+	
+
+	
+	public String headingTxt()
+	{
+		return driver.findElement(heading).getText();
+	}
+	
+	public String footTxt()
+	{
+		return driver.findElement(foot).getText();
+	}
+	
+	public boolean ghostFootLink()
+	{
+		return driver.findElement(glink).isDisplayed();
+	}
+	
+	
+////////////////////////////////////////////////////////////////////////////////////
+	
+	public String annCount()
+	{
+		return driver.findElement(anncount).getText();
+	}
+	
+	public String ramCount()
+	{
+		return driver.findElement(roaming).getText();
+	}
+	
+	public String faqCount()
+	{
+		return driver.findElement(faqs).getText();
+	}
+	
+	public String manCount()
+	{
+		return driver.findElement(manual).getText();
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////
+	
+	// to check the count of pacticuler blog with the page
+	
+	public String  countIteamOfAnnouncement()
+	{
+			
+			return  driver.findElement(anncount).getText();
+	}
+		
+	
+	public String  countIteamOfRoaming()
+	{
+			
+			return  driver.findElement(roaming).getText();
+	}
+	
+	public String  countIteamOfFaqs()
+	{
+			
+			return  driver.findElement(faqs).getText();
+	}
+	
+	public String  countIteamOfManual()
+	{
+			
+			return  driver.findElement(manual).getText();
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+
+	
+	
+	
+	
+/////////////////////////////////////
+	
+	public String  sideNavTxt()
+	{
+		String a[] = {"das","ann","poll","rom","faqc","fqs","supcat","sup","mancat","manu","shor"};
+		
+		for(String b:a)
+		{
+			switch(b)
+			{
+			case "das": return dasTxt();
+			case "ann": return annTxt();
+			case "poll": return pollTxt();
+			case "rom": return romTxt();
+			case "faqc":return faqcTxt();
+			case "fqs":return fasTxt();
+			case "supcat": return subcatTxt();
+			case "sup":return subTxt();
+			case "mancat":return mancat();
+			case "manu": return man();
+			case "shor":return shorTxt();
+			default: System.out.print("invalid data ...!");
+			
+			
+			}
+			
+		}
+		return null;
+		 
+		
+		
+	}
+	
+	
+	
+	
+	public String dasTxt()
+	{
+		return driver.findElement(das).getText();
+	}
+	
+	
+	public String annTxt()
+	{
+		return driver.findElement(ann).getText();
+	}
+	
+	public String pollTxt()
+	{
+		return driver.findElement(poll).getText();
+	}
+	
+	public String romTxt()
+	{
+		return driver.findElement(rom).getText();
+	}
+	
+	public String faqcTxt()
+	{
+		return driver.findElement(faqc).getText();
+	}
+	
+	public String fasTxt()
+	{
+		return driver.findElement(fqs).getText();
+	}
+	
+	public String subcatTxt()
+	{
+		return driver.findElement(supcat).getText();
+	}
+	
+	public String subTxt()
+	{
+		return driver.findElement(sup).getText();
+	}
+	
+	public String mancat()
+	{
+		return driver.findElement(mancat).getText();
+	}
+	
+	public String man()
+	{
+		return driver.findElement(manu).getText();
+	}
+	
+	public String shorTxt()
+	{
+		return driver.findElement(shor).getText();
 	}
 }
 	

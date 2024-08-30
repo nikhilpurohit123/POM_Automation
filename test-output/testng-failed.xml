@@ -5,10 +5,10 @@
     <classes>
       <class name="test.DashboardTest">
         <methods>
+          <include name="sideNavTxtMatch"/>
           <include name="close"/>
           <include name="init"/>
           <include name="setup"/>
-          <include name="Logout"/>
         </methods>
       </class> <!-- test.DashboardTest -->
     </classes>

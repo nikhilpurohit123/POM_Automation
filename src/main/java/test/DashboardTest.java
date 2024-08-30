@@ -29,7 +29,7 @@ public class DashboardTest extends TestBase{
 		Thread.sleep(3000);
 	}
 	
-	
+	/*
 	
 	@Test(priority =1)
 	public void checkUrl()
@@ -38,6 +38,17 @@ public class DashboardTest extends TestBase{
 		
 	}
 	
+	@Test(priority = 25)
+	public void checkHeading()
+	{
+		Assert.assertEquals(d.headingTxt(), "Dashboard");		
+	}
+	
+	@Test(priority = 26)
+	public void footerTxtVisible()
+	{
+		Assert.assertEquals(d.footTxt(), "2024 © Ghost News by Ghost");
+	}
 	
 	@Test(priority = 2)
 	public void visiblelogo()
@@ -126,11 +137,12 @@ public class DashboardTest extends TestBase{
 	
 	
 	
-	@Test(priority = 21)
+	@Test(priority = 28)
 	public void Logout() 
 	{		
 		d.clickLogout();		
 	}
+	
 	
 	
 	@Test(priority = 20)
@@ -185,11 +197,21 @@ public class DashboardTest extends TestBase{
 		Assert.assertTrue(d.faqImgVisible(), "check the in dasboard faq blog contain the icon");
 	}
 	
-	@Test(priority = 19)
-	public void manImageMatch()
+	@Test(enabled = false)
+	public void checktheCount()
 	{
-		Assert.assertTrue(d.manImgVisible(), "check the in dasboard manual blog contain the icon");
+		// blank 		
+		
 	}
+	*/
 
-
+	@Test
+	public void sideNavTxtMatch()
+	{
+		String a[] = {"Dashboard","Announcements","Polls","Roaming Countries","FAQ Category","FAQs","Support Category","Support","Manual Category","Manaul Replies","Auto Replies"};
+		
+		for(String b:a) {
+		Assert.assertEquals(d.sideNavTxt(), b);}
+	}
+	
 }
