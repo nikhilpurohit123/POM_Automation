@@ -12,10 +12,11 @@ public class Constant {
 	public static final String FAQS = "http://146.59.87.38:8080/ghostnews/#/faq";
 	public static final String SUPPORTCATEGORY = "http://146.59.87.38:8080/ghostnews/#/supportcategory";
 	public static final String SUPPORT = "http://146.59.87.38:8080/ghostnews/#/support";
-	public static final String  MANUALCATEGORY = "http://146.59.87.38:8080/ghostnews/#/manualcategory";
+	public static final String MANUALCATEGORY = "http://146.59.87.38:8080/ghostnews/#/manualcategory";
 	public static final String MAUALREPIES = "http://146.59.87.38:8080/ghostnews/#/manual";
-	public static final String  AUTOREPIES = "http://146.59.87.38:8080/ghostnews/#/shortcuts";	
-	
+	public static final String AUTOREPIES = "http://146.59.87.38:8080/ghostnews/#/shortcuts";	
+	public static final String TEST ="";
+	public static final String LIVE ="";
 	
 	
 	

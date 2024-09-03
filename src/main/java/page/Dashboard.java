@@ -1,16 +1,17 @@
 package page;
 
-import java.util.List;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class Dashboard {
 	
 	
 	WebDriver driver;
 	
+	
+	
+	// locater 	
 	private By logo = By.xpath("//a[@class='logo logo-light text-center']//span[@class='logo-lg']");	
 	private By  menubtn =By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");	
 	private By glivepanel = By.xpath("//div[@class='navbar-custom ']//div[2]//a[1]");
@@ -21,11 +22,10 @@ public class Dashboard {
 	private By logoutimg = By.xpath("//img[@class='rounded-circle']");// small ghost logo in logout
 	private By heading = By.xpath("//h4[normalize-space()='Dashboard']");
 	private By logoutlink = By.xpath("//a[@id='dropdown-profile']"); // logout image link of small ghost icon         
-
 	private By cat = By.xpath("//a[@id='dropdown-apps']");// category icon 
-	
 	private By foot = By.xpath("//div[@class='col-md-6']");
 	private By glink= By.xpath("//a[normalize-space()='Ghost']");
+	
 	
 	// this is all blog image in dashbord 
 	private By imgA = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
@@ -55,17 +55,28 @@ public class Dashboard {
 	
 	
 	// blog conatainns the count number in it
+	
 	private By anncount = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
 	private By roaming = By.xpath( "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
 	private By faqs = By.xpath(    "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
 	private By manual = By.xpath(  "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
 	
+
 	
+	// link images
 	
+	private By dimg = By.xpath("//a[@data-menu-key='dashboards']//*[name()='svg']");
+	private By aimg = By.xpath("//a[@data-menu-key='announcements']//*[name()='svg']");
+	private By pimg = By.xpath("//a[@data-menu-key='polls']//*[name()='svg']");
+	private By rimg = By.xpath("//a[@data-menu-key='roamings']//*[name()='svg']");
+	private By facimg = By.xpath("//a[@data-menu-key='faqcategory']//*[name()='svg']");
+	private By fqsimg = By.xpath("//a[@data-menu-key='faq']//*[name()='svg']");
+	private By simg = By.xpath("//a[@data-menu-key='supportcategory']//*[name()='svg']");
+	private By supimg = By.xpath("//a[@data-menu-key='support']//*[name()='svg']");
+	private By manimg = By.xpath("//a[@data-menu-key='manualcategory']//*[name()='svg']");
+	private By mimg = By.xpath("//a[@data-menu-key='manual']//*[name()='svg']");
+	private By shimg = By.xpath("//a[@data-menu-key='shortcuts']//*[name()='svg']");
 	
-	// group of side nav
-	
-	private By grop = By.xpath("//a[@class='side-nav-link-ref side-sub-nav-link side-nav-link']");
 	
 	
 	
@@ -128,7 +139,10 @@ public class Dashboard {
 	{
 		click(gtestpanel);
 	}
-	public void back()
+	
+	
+	
+	public void back()    // back function create 
 	{
 		driver.navigate().back();
 	}
@@ -180,13 +194,17 @@ public class Dashboard {
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
+	/* function which give text */ 
+	
 	
 	public String returntxt(By d)
 	{
 		return driver.findElement(d).getText();
 	}
 	
+////////////////////////////////////////////////////////////////////////////
 	
+	/* block text */
 	
 	public String getAnnTxt()
 	{
@@ -210,12 +228,14 @@ public class Dashboard {
 		return returntxt(man);
 	}
 	
+/////////////////////////////////////////////////////////////////////////////
+	
+	/* block image checking */
 	
 	 
 	public boolean  annImgVisible()
 	{
-		return driver.findElement(imgA).isDisplayed();
-		
+		return driver.findElement(imgA).isDisplayed();		
 	}
 	
 	public boolean romImgVisible()
@@ -234,7 +254,9 @@ public class Dashboard {
 	}
 	
 	
-
+//////////////////////////////////////////////////////////////////////////////////
+	
+	/* foot txt and link */
 	
 	public String headingTxt()
 	{
@@ -253,6 +275,8 @@ public class Dashboard {
 	
 	
 ////////////////////////////////////////////////////////////////////////////////////
+	
+	// giving the block text 
 	
 	public String annCount()
 	{
@@ -276,8 +300,9 @@ public class Dashboard {
 	
 ////////////////////////////////////////////////////////////////////////////////////////
 	
-	// to check the count of pacticuler blog with the page
 	
+	/* to check the count of pacticuler blog with the page */
+	 
 	public String  countIteamOfAnnouncement()
 	{
 			
@@ -305,59 +330,25 @@ public class Dashboard {
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 
-	
-	
-	
-	
-/////////////////////////////////////
-	
-	public String  sideNavTxt()
-	{
-		String a[] = {"das","ann","poll","rom","faqc","fqs","supcat","sup","mancat","manu","shor"};
-		
-		for(String b:a)
-		{
-			switch(b)
-			{
-			case "das": return dasTxt();
-			case "ann": return annTxt();
-			case "poll": return pollTxt();
-			case "rom": return romTxt();
-			case "faqc":return faqcTxt();
-			case "fqs":return fasTxt();
-			case "supcat": return subcatTxt();
-			case "sup":return subTxt();
-			case "mancat":return mancat();
-			case "manu": return man();
-			case "shor":return shorTxt();
-			default: System.out.print("invalid data ...!");
-			
-			
-			}
-			
-		}
-		return null;
-		 
-		
-		
-	}
-	
-	
-	
+	/* giveing the side navigation text */
 	
 	public String dasTxt()
 	{
+		click(menubtn);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		return driver.findElement(das).getText();
+		
 	}
-	
-	
+
 	public String annTxt()
 	{
+		
 		return driver.findElement(ann).getText();
 	}
-	
+		
 	public String pollTxt()
 	{
+		
 		return driver.findElement(poll).getText();
 	}
 	
@@ -368,38 +359,188 @@ public class Dashboard {
 	
 	public String faqcTxt()
 	{
+		
 		return driver.findElement(faqc).getText();
 	}
-	
-	public String fasTxt()
-	{
+		
+	public String fqsTxt() 
+	{		
+		
 		return driver.findElement(fqs).getText();
 	}
-	
-	public String subcatTxt()
+	    
+	public String supcatTxt()
 	{
+		
 		return driver.findElement(supcat).getText();
 	}
 	
-	public String subTxt()
+	public String supTxt()
 	{
+		
 		return driver.findElement(sup).getText();
 	}
 	
-	public String mancat()
+	public String mancatTxt()
 	{
+		
 		return driver.findElement(mancat).getText();
 	}
 	
-	public String man()
+	public String manuTxt()
 	{
+		
 		return driver.findElement(manu).getText();
 	}
 	
-	public String shorTxt()
+	public String shorTxt() 
 	{
+		
 		return driver.findElement(shor).getText();
+	
 	}
+	
+////////////////////////////////////////////////////////////////////////////////////
+	
+	/* comparing the url end ponint */ 
+	
+	
+	
+	public String dasUrl()
+	{
+		
+		return driver.getCurrentUrl();
+	}
+	
+	public String annUrl()
+	{
+		click(ann);
+		return driver.getCurrentUrl();
+	}
+
+	public String pollUrl()
+	{
+		click(poll);
+		return driver.getCurrentUrl();
+	}
+
+	public String romcUrl()
+	{
+		click(rom);
+		return driver.getCurrentUrl();
+	}
+
+	public String faqcUrl()
+	{
+		click(faqc);
+		return driver.getCurrentUrl();
+	}
+
+	public String faqsUrl()
+	{
+		click(fqs);
+		return driver.getCurrentUrl();
+	}
+
+	public String supcUrl()
+	{
+		click(supcat);
+		return driver.getCurrentUrl();
+	}
+
+	public String supUrl()
+	{
+		click(sup);
+		return driver.getCurrentUrl();
+	}
+
+	public String manUrl()
+	{
+		click(mancat);
+		return driver.getCurrentUrl();
+	}
+
+	public String manrUrl()
+	{
+		click(manu);
+		return driver.getCurrentUrl();
+	}
+
+	public String autoUrl()
+	{
+		click(shor);
+		return driver.getCurrentUrl();
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	public boolean giveImgStatus(By d)
+	{
+		return driver.findElement(d).isDisplayed();
+	}
+	
+	
+	public boolean dasImg()
+	{
+		return giveImgStatus(dimg);
+	}
+	
+	public boolean annImg()
+	{
+		return giveImgStatus(aimg);
+	}
+	
+	public boolean pollImg()
+	{
+		return giveImgStatus(pimg);
+	}
+	
+	public boolean romcImg()
+	{
+		return giveImgStatus(rimg);
+	}
+	
+	public boolean faqcImg()
+	{
+		return giveImgStatus(facimg);
+	}
+	
+	public boolean faqImg()
+	{
+		return giveImgStatus(fqsimg);
+	}
+	
+	public boolean supcImg()
+	{
+		return giveImgStatus(simg);
+	}
+	
+	public boolean supImg()
+	{
+		return giveImgStatus(supimg);
+	}
+	
+	public boolean mancImg()
+	{
+		return giveImgStatus(manimg);
+	}
+	
+	public boolean manuImg()
+	{
+		return giveImgStatus(mimg);
+	}
+	
+	public boolean shorImg()
+	{
+		return giveImgStatus(shimg);
+	}
+	
+	
+	
+	
+	
+	
 }
 	
 	

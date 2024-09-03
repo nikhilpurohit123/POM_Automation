@@ -5,10 +5,64 @@
     <classes>
       <class name="test.DashboardTest">
         <methods>
-          <include name="sideNavTxtMatch"/>
-          <include name="close"/>
-          <include name="init"/>
+          <include name="manrSideNavTxtMatch"/>
+          <include name="pollSideNavTxtMatch"/>
+          <include name="checkMenuVisible"/>
           <include name="setup"/>
+          <include name="footerTxtVisible"/>
+          <include name="logoutimgEnabled"/>
+          <include name="annImageMatch"/>
+          <include name="autorIconCheck"/>
+          <include name="supSideNavTxtMatch"/>
+          <include name="romSideNavTxtMatch"/>
+          <include name="init"/>
+          <include name="checkLogoutImg"/>
+          <include name="faqbloginTxtScreen"/>
+          <include name="supcUrlCheck"/>
+          <include name="close"/>
+          <include name="faqUrlCheck"/>
+          <include name="dasIconCheck"/>
+          <include name="dasSideNavTxtMatch"/>
+          <include name="faqSideNavTxtMatch"/>
+          <include name="checkkMenuEnable"/>
+          <include name="manrUrlCheck"/>
+          <include name="logoutImgVisible"/>
+          <include name="shortSideNavTxtMatch"/>
+          <include name="supcSideNavTxtMatch"/>
+          <include name="mancIconCheck"/>
+          <include name="annblogTxtinScreen"/>
+          <include name="categoryBoxEna"/>
+          <include name="checkHeading"/>
+          <include name="manIconCheck"/>
+          <include name="annSideNavTxtMatch"/>
+          <include name="romImageMatch"/>
+          <include name="mancUrlCheck"/>
+          <include name="clickONLogo"/>
+          <include name="faqcSideNavTxtMatch"/>
+          <include name="supUrlCheck"/>
+          <include name="romcUrlCheck"/>
+          <include name="supcIconCheck"/>
+          <include name="faqImageMatch"/>
+          <include name="Logout"/>
+          <include name="rombloginTxtScreen"/>
+          <include name="autoUrlCheck"/>
+          <include name="supIconCheck"/>
+          <include name="romcIconCheck"/>
+          <include name="dasUrlCheck"/>
+          <include name="annUrlCheck"/>
+          <include name="faqcIconCheck"/>
+          <include name="setlogin"/>
+          <include name="checkUrl"/>
+          <include name="faqIconCheck"/>
+          <include name="categotyBoxVisible"/>
+          <include name="pollIconCheck"/>
+          <include name="annIconCheck"/>
+          <include name="clickOnMenu"/>
+          <include name="visiblelogo"/>
+          <include name="pollUrlCheck"/>
+          <include name="faqcUrlCheck"/>
+          <include name="manblogTxtinScreen"/>
+          <include name="mancSideNavTxtMatch"/>
         </methods>
       </class> <!-- test.DashboardTest -->
     </classes>

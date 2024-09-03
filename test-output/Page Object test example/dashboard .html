@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>TestNG:  dashboard </title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>dashboard </h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>55/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Sep 03 17:50:40 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>7 seconds (7490 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.DashboardTest.romImageMatch()'><b>romImageMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.pollIconCheck()'><b>pollIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.categotyBoxVisible()'><b>categotyBoxVisible</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.supUrlCheck()'><b>supUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.mancUrlCheck()'><b>mancUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.romcUrlCheck()'><b>romcUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.supcSideNavTxtMatch()'><b>supcSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.manIconCheck()'><b>manIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.supSideNavTxtMatch()'><b>supSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.checkLogoutImg()'><b>checkLogoutImg</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.checkHeading()'><b>checkHeading</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqcSideNavTxtMatch()'><b>faqcSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.dasSideNavTxtMatch()'><b>dasSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqcIconCheck()'><b>faqcIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.autorIconCheck()'><b>autorIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.Logout()'><b>Logout</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.logoutImgVisible()'><b>logoutImgVisible</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.checkUrl()'><b>checkUrl</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.annImageMatch()'><b>annImageMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.supIconCheck()'><b>supIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.shortSideNavTxtMatch()'><b>shortSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqSideNavTxtMatch()'><b>faqSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.pollSideNavTxtMatch()'><b>pollSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.annIconCheck()'><b>annIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.categoryBoxEna()'><b>categoryBoxEna</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.visiblelogo()'><b>visiblelogo</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.romcIconCheck()'><b>romcIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.mancSideNavTxtMatch()'><b>mancSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.annblogTxtinScreen()'><b>annblogTxtinScreen</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.checkkMenuEnable()'><b>checkkMenuEnable</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.mancIconCheck()'><b>mancIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.manblogTxtinScreen()'><b>manblogTxtinScreen</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.manrSideNavTxtMatch()'><b>manrSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqUrlCheck()'><b>faqUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.logoutimgEnabled()'><b>logoutimgEnabled</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.supcUrlCheck()'><b>supcUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.footerTxtVisible()'><b>footerTxtVisible</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.rombloginTxtScreen()'><b>rombloginTxtScreen</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.annUrlCheck()'><b>annUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.annSideNavTxtMatch()'><b>annSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqcUrlCheck()'><b>faqcUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqbloginTxtScreen()'><b>faqbloginTxtScreen</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.dasIconCheck()'><b>dasIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.clickOnMenu()'><b>clickOnMenu</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqIconCheck()'><b>faqIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.setlogin()'><b>setlogin</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>3</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.supcIconCheck()'><b>supcIconCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.manrUrlCheck()'><b>manrUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.romSideNavTxtMatch()'><b>romSideNavTxtMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.clickONLogo()'><b>clickONLogo</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.faqImageMatch()'><b>faqImageMatch</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.autoUrlCheck()'><b>autoUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.pollUrlCheck()'><b>pollUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.checkMenuVisible()'><b>checkMenuVisible</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+<tr>
+<td title='test.DashboardTest.dasUrlCheck()'><b>dasUrlCheck</b><br>Test class: test.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>test.DashboardTest@71d44a3</td></tr>
+</table><p>
+</body>
+</html>
