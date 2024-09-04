@@ -2,7 +2,6 @@ package page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class Login {
 
@@ -21,7 +20,7 @@ public class Login {
 	private By perror = By.xpath("//div[@class='d-block invalid-feedback']");
 	private By imglogo = By.xpath("//a[@class='logo logo-dark text-center']//img");
 	private By forgotLink = By.xpath("//a[normalize-space()='Forgot your password?']");
-	private By backtologin  = By.xpath("//div[@class='mt-3 row']//p[1]");
+//	private By backtologin  = By.xpath("//div[@class='mt-3 row']//p[1]");
 
 
 

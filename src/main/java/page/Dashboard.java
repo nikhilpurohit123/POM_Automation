@@ -14,10 +14,10 @@ public class Dashboard {
 	// locater 	
 	private By logo = By.xpath("//a[@class='logo logo-light text-center']//span[@class='logo-lg']");	
 	private By  menubtn =By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");	
-	private By glivepanel = By.xpath("//div[@class='navbar-custom ']//div[2]//a[1]");
+//	private By glivepanel = By.xpath("//div[@class='navbar-custom ']//div[2]//a[1]");
 	private By gtestpanel = By.xpath("//div[@class='row g-0']//div[1]");
 	private By inlogoimg = By.xpath("//i[@class='fe-log-out me-1']");// in logout link near logo 
-	private By arrimg = By.xpath("//i[@class='mdi mdi-chevron-down']");// near arrow of ghost icon 
+//	private By arrimg = By.xpath("//i[@class='mdi mdi-chevron-down']");// near arrow of ghost icon 
 	private By logout = By.xpath("//a[@class='dropdown-item notify-item p-2 bs-2']");// real logout link 
 	private By logoutimg = By.xpath("//img[@class='rounded-circle']");// small ghost logo in logout
 	private By heading = By.xpath("//h4[normalize-space()='Dashboard']");
