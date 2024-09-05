@@ -5,9 +5,53 @@
     <classes>
       <class name="test.AnnouncementsTest">
         <methods>
+          <include name="clickGhostLogoVisible"/>
+          <include name="ghostLogoClick"/>
+          <include name="supcUrlCheck"/>
+          <include name="annHeadingCkeck"/>
+          <include name="initDriver"/>
+          <include name="faqcIconCheck"/>
+          <include name="romSideNavTxtMatch"/>
+          <include name="clickOnCatergoryPanaIcon"/>
           <include name="setup"/>
+          <include name="autorIconCheck"/>
+          <include name="supSideNavTxtMatch"/>
+          <include name="mancUrlCheck"/>
+          <include name="menubtnClick"/>
+          <include name="romcUrlCheck"/>
+          <include name="menubtnVisible"/>
+          <include name="supUrlCheck"/>
+          <include name="faqcSideNavTxtMatch"/>
+          <include name="supcIconCheck"/>
+          <include name="catgPanalIconVisible"/>
+          <include name="manrSideNavTxtMatch"/>
+          <include name="catgPanelEnabled"/>
+          <include name="mancSideNavTxtMatch"/>
+          <include name="pollUrlCheck"/>
+          <include name="annSideNavTxtMatch"/>
+          <include name="faqcUrlCheck"/>
           <include name="close"/>
-          <include name="init"/>
+          <include name="manIconCheck"/>
+          <include name="annIconCheck"/>
+          <include name="menubtnEnabled"/>
+          <include name="annUrlCheck"/>
+          <include name="pollIconCheck"/>
+          <include name="shortSideNavTxtMatch"/>
+          <include name="supcSideNavTxtMatch"/>
+          <include name="mancIconCheck"/>
+          <include name="faqIconCheck"/>
+          <include name="pollSideNavTxtMatch"/>
+          <include name="footerTxtCheck"/>
+          <include name="manrUrlCheck"/>
+          <include name="checkUrl"/>
+          <include name="dasIconCheck"/>
+          <include name="dasSideNavTxtMatch"/>
+          <include name="faqSideNavTxtMatch"/>
+          <include name="dasUrlCheck"/>
+          <include name="faqUrlCheck"/>
+          <include name="supIconCheck"/>
+          <include name="romcIconCheck"/>
+          <include name="autoUrlCheck"/>
         </methods>
       </class> <!-- test.AnnouncementsTest -->
     </classes>

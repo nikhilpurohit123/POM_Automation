@@ -1,5 +1,7 @@
 package test;
 
+import java.awt.AWTException;
+
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -51,9 +53,10 @@ public class DashboardTest extends TestBase{
 	}
 
 	@Test(priority = 2)
-	public void visiblelogo()
+	public void visiblelogo() 
 	{
-		Assert.assertTrue(d.ghostImg(),"Ghost logo is visible oe not ");
+		
+		Assert.assertTrue(d.ghostImg(),"Ghost logo is visible or not ");
 
 	}
 

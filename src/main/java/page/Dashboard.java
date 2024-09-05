@@ -4,78 +4,14 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import utility.Constant;
+
 public class Dashboard {
 	
 	
-	WebDriver driver;
+	WebDriver driver;	
 	
 	
-	
-	// locater 	
-	private By logo = By.xpath("//a[@class='logo logo-light text-center']//span[@class='logo-lg']");	
-	private By  menubtn =By.xpath("//button[@class='button-menu-mobile waves-effect waves-light d-none d-lg-block']");	
-//	private By glivepanel = By.xpath("//div[@class='navbar-custom ']//div[2]//a[1]");
-	private By gtestpanel = By.xpath("//div[@class='row g-0']//div[1]");
-	private By inlogoimg = By.xpath("//i[@class='fe-log-out me-1']");// in logout link near logo 
-//	private By arrimg = By.xpath("//i[@class='mdi mdi-chevron-down']");// near arrow of ghost icon 
-	private By logout = By.xpath("//a[@class='dropdown-item notify-item p-2 bs-2']");// real logout link 
-	private By logoutimg = By.xpath("//img[@class='rounded-circle']");// small ghost logo in logout
-	private By heading = By.xpath("//h4[normalize-space()='Dashboard']");
-	private By logoutlink = By.xpath("//a[@id='dropdown-profile']"); // logout image link of small ghost icon         
-	private By cat = By.xpath("//a[@id='dropdown-apps']");// category icon 
-	private By foot = By.xpath("//div[@class='col-md-6']");
-	private By glink= By.xpath("//a[normalize-space()='Ghost']");
-	
-	
-	// this is all blog image in dashbord 
-	private By imgA = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
-	private By imgR = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]");
-	private By imgF = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]");
-	private By imgM = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]");
-	
-	
-	// all this are blog in dasboard
-	private By Ann = By.xpath("//p[normalize-space()='Announcements']");
-	private By Rom = By.xpath("//p[normalize-space()='Roaming Countries']");
-	private By faq = By.xpath("//p[normalize-space()='FAQs']");
-	private By man = By.xpath("//p[normalize-space()='Manuals']");
-	
-   // side nav  links
-	private By das = By.xpath("//a[@data-menu-key='dashboards']");
-	private By ann = By.xpath("//a[@data-menu-key='announcements']");
-	private By poll = By.xpath("//a[@data-menu-key='polls']");
-	private By rom = By.xpath("//a[@data-menu-key='roamings']");
-	private By faqc = By.xpath("//a[@data-menu-key='faqcategory']");
-	private By fqs = By.xpath("//a[@data-menu-key='faq']");
-	private By supcat = By.xpath("//a[@data-menu-key='supportcategory']");
-	private By sup = By.xpath("//a[@data-menu-key='support']");
-	private By mancat = By.xpath("//a[@data-menu-key='manualcategory']");
-	private By manu = By.xpath("//a[@data-menu-key='manual']");
-	private By shor = By.xpath("//a[@data-menu-key='shortcuts']");
-	
-	
-	// blog conatainns the count number in it
-	
-	private By anncount = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
-	private By roaming = By.xpath( "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
-	private By faqs = By.xpath(    "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
-	private By manual = By.xpath(  "//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/h3[1]");
-	
-
-	
-	// link images
-	
-	private By dimg = By.xpath("//a[@data-menu-key='dashboards']//*[name()='svg']");
-	private By aimg = By.xpath("//a[@data-menu-key='announcements']//*[name()='svg']");
-	private By pimg = By.xpath("//a[@data-menu-key='polls']//*[name()='svg']");
-	private By rimg = By.xpath("//a[@data-menu-key='roamings']//*[name()='svg']");
-	private By facimg = By.xpath("//a[@data-menu-key='faqcategory']//*[name()='svg']");
-	private By fqsimg = By.xpath("//a[@data-menu-key='faq']//*[name()='svg']");
-	private By simg = By.xpath("//a[@data-menu-key='supportcategory']//*[name()='svg']");
-	private By supimg = By.xpath("//a[@data-menu-key='support']//*[name()='svg']");
-	private By manimg = By.xpath("//a[@data-menu-key='manualcategory']//*[name()='svg']");
-	private By mimg = By.xpath("//a[@data-menu-key='manual']//*[name()='svg']");
-	private By shimg = By.xpath("//a[@data-menu-key='shortcuts']//*[name()='svg']");
 	
 	
 	
@@ -93,12 +29,12 @@ public class Dashboard {
 	
 	public boolean ghostImg()
 	{
-		return driver.findElement(logo).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.logo).isDisplayed();
 	}
 	
 	public void ghostLogoClick()
 	{
-		driver.findElement(logo).click();
+		driver.findElement(Constant.DashboardConst.logo).click();
 		
 	}
 	
@@ -109,35 +45,35 @@ public class Dashboard {
 	
 	public boolean menuVisible()
 	{
-		return driver.findElement(menubtn).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.menubtn).isDisplayed();
 	}
 	
 	
 	public boolean menuEnable()
 	{
-		return driver.findElement(menubtn).isEnabled();
+		return driver.findElement(Constant.DashboardConst.menubtn).isEnabled();
 	}
 	
 	
 	public void clickMenu()
 	{
-		click(menubtn);
+		click(Constant.DashboardConst.menubtn);
 	}
 	
 	public boolean showNavText()
 	{
-		return driver.findElement(das).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.das).isDisplayed();
 	}
 	
 	
 	public void selectTestPannel()
 	{
-		click(gtestpanel);	
+		click(Constant.DashboardConst.gtestpanel);	
 	}
 	
 	public void selectLivePannel()
 	{
-		click(gtestpanel);
+		click(Constant.DashboardConst.gtestpanel);
 	}
 	
 	
@@ -150,45 +86,45 @@ public class Dashboard {
 	
 	public boolean roundlogimg()// small round ghost logo
 	{
-		 return driver.findElement(logoutimg).isDisplayed();
+		 return driver.findElement(Constant.DashboardConst.logoutimg).isDisplayed();
 		
 	}
 	public void roundloginClick()
 	{
-		click(logoutimg);
+		click(Constant.DashboardConst.logoutimg);
 	}
 	
 	public boolean logimgEna()// small round ghost logo
 	{
-		 return driver.findElement(logoutimg).isEnabled();
+		 return driver.findElement(Constant.DashboardConst.logoutimg).isEnabled();
 		
 	}
 	
 	
 	public boolean categoryimg()// test pannel cantain  image
 	{
-		return driver.findElement(cat).isDisplayed();	
+		return driver.findElement(Constant.DashboardConst.cat).isDisplayed();	
 		
 	}
 	
 	public boolean catimgEnabled()// test pannel cantain  image uper logo
 	{
-		return driver.findElement(cat).isEnabled();
+		return driver.findElement(Constant.DashboardConst.cat).isEnabled();
 		
 	}
 	
 	
 	public void clickLogout() 
 	{
-		click(logoutlink);		
-		click(logout);
+		click(Constant.DashboardConst.logoutlink);		
+		click(Constant.DashboardConst.logout);
 		
 	}
 	
 	
 	public boolean logoutImg()// in logout block image 
 	{
-		return driver.findElement(inlogoimg).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.inlogoimg).isDisplayed();
 	}
 	
 	
@@ -208,24 +144,24 @@ public class Dashboard {
 	
 	public String getAnnTxt()
 	{
-		return returntxt(Ann);
+		return returntxt(Constant.DashboardConst.Ann);
 	}
 	
 	public String getRomTxt()
 	{
-		return returntxt(Rom);
+		return returntxt(Constant.DashboardConst.Rom);
 	}
 	
 	public String getFaqTxt()
 	{
-		return returntxt(faq);
+		return returntxt(Constant.DashboardConst.faq);
 		
 	}
 	
 	public String getmanTxt()
 	{
 		
-		return returntxt(man);
+		return returntxt(Constant.DashboardConst.man);
 	}
 	
 /////////////////////////////////////////////////////////////////////////////
@@ -235,22 +171,22 @@ public class Dashboard {
 	 
 	public boolean  annImgVisible()
 	{
-		return driver.findElement(imgA).isDisplayed();		
+		return driver.findElement(Constant.DashboardConst.imgA).isDisplayed();		
 	}
 	
 	public boolean romImgVisible()
 	{
-		return driver.findElement(imgR).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.imgR).isDisplayed();
 	}
 	
 	public boolean faqImgVisible()
 	{
-		return driver.findElement(imgF).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.imgF).isDisplayed();
 	}
 		
 	public boolean manImgVisible()
 	{
-		return driver.findElement(imgM).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.imgM).isDisplayed();
 	}
 	
 	
@@ -260,17 +196,17 @@ public class Dashboard {
 	
 	public String headingTxt()
 	{
-		return driver.findElement(heading).getText();
+		return driver.findElement(Constant.DashboardConst.heading).getText();
 	}
 	
 	public String footTxt()
 	{
-		return driver.findElement(foot).getText();
+		return driver.findElement(Constant.DashboardConst.foot).getText();
 	}
 	
 	public boolean ghostFootLink()
 	{
-		return driver.findElement(glink).isDisplayed();
+		return driver.findElement(Constant.DashboardConst.glink).isDisplayed();
 	}
 	
 	
@@ -280,22 +216,22 @@ public class Dashboard {
 	
 	public String annCount()
 	{
-		return driver.findElement(anncount).getText();
+		return driver.findElement(Constant.DashboardConst.anncount).getText();
 	}
 	
 	public String ramCount()
 	{
-		return driver.findElement(roaming).getText();
+		return driver.findElement(Constant.DashboardConst.roaming).getText();
 	}
 	
 	public String faqCount()
 	{
-		return driver.findElement(faqs).getText();
+		return driver.findElement(Constant.DashboardConst.faqs).getText();
 	}
 	
 	public String manCount()
 	{
-		return driver.findElement(manual).getText();
+		return driver.findElement(Constant.DashboardConst.manual).getText();
 	}
 	
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -306,26 +242,26 @@ public class Dashboard {
 	public String  countIteamOfAnnouncement()
 	{
 			
-			return  driver.findElement(anncount).getText();
+			return  driver.findElement(Constant.DashboardConst.anncount).getText();
 	}
 		
 	
 	public String  countIteamOfRoaming()
 	{
 			
-			return  driver.findElement(roaming).getText();
+			return  driver.findElement(Constant.DashboardConst.roaming).getText();
 	}
 	
 	public String  countIteamOfFaqs()
 	{
 			
-			return  driver.findElement(faqs).getText();
+			return  driver.findElement(Constant.DashboardConst.faqs).getText();
 	}
 	
 	public String  countIteamOfManual()
 	{
 			
-			return  driver.findElement(manual).getText();
+			return  driver.findElement(Constant.DashboardConst.manual).getText();
 	}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
@@ -334,69 +270,69 @@ public class Dashboard {
 	
 	public String dasTxt()
 	{
-		click(menubtn);
+		click(Constant.DashboardConst.menubtn);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-		return driver.findElement(das).getText();
+		return driver.findElement(Constant.DashboardConst.das).getText();
 		
 	}
 
 	public String annTxt()
 	{
 		
-		return driver.findElement(ann).getText();
+		return driver.findElement(Constant.DashboardConst.ann).getText();
 	}
 		
 	public String pollTxt()
 	{
 		
-		return driver.findElement(poll).getText();
+		return driver.findElement(Constant.DashboardConst.poll).getText();
 	}
 	
 	public String romTxt()
 	{
-		return driver.findElement(rom).getText();
+		return driver.findElement(Constant.DashboardConst.rom).getText();
 	}
 	
 	public String faqcTxt()
 	{
 		
-		return driver.findElement(faqc).getText();
+		return driver.findElement(Constant.DashboardConst.faqc).getText();
 	}
 		
 	public String fqsTxt() 
 	{		
 		
-		return driver.findElement(fqs).getText();
+		return driver.findElement(Constant.DashboardConst.fqs).getText();
 	}
 	    
 	public String supcatTxt()
 	{
 		
-		return driver.findElement(supcat).getText();
+		return driver.findElement(Constant.DashboardConst.supcat).getText();
 	}
 	
 	public String supTxt()
 	{
 		
-		return driver.findElement(sup).getText();
+		return driver.findElement(Constant.DashboardConst.sup).getText();
 	}
 	
 	public String mancatTxt()
 	{
 		
-		return driver.findElement(mancat).getText();
+		return driver.findElement(Constant.DashboardConst.mancat).getText();
 	}
 	
 	public String manuTxt()
 	{
 		
-		return driver.findElement(manu).getText();
+		return driver.findElement(Constant.DashboardConst.manu).getText();
 	}
 	
 	public String shorTxt() 
 	{
 		
-		return driver.findElement(shor).getText();
+		return driver.findElement(Constant.DashboardConst.shor).getText();
 	
 	}
 	
@@ -414,61 +350,61 @@ public class Dashboard {
 	
 	public String annUrl()
 	{
-		click(ann);
+		click(Constant.DashboardConst.ann);
 		return driver.getCurrentUrl();
 	}
 
 	public String pollUrl()
 	{
-		click(poll);
+		click(Constant.DashboardConst.poll);
 		return driver.getCurrentUrl();
 	}
 
 	public String romcUrl()
 	{
-		click(rom);
+		click(Constant.DashboardConst.rom);
 		return driver.getCurrentUrl();
 	}
 
 	public String faqcUrl()
 	{
-		click(faqc);
+		click(Constant.DashboardConst.faqc);
 		return driver.getCurrentUrl();
 	}
 
 	public String faqsUrl()
 	{
-		click(fqs);
+		click(Constant.DashboardConst.fqs);
 		return driver.getCurrentUrl();
 	}
 
 	public String supcUrl()
 	{
-		click(supcat);
+		click(Constant.DashboardConst.supcat);
 		return driver.getCurrentUrl();
 	}
 
 	public String supUrl()
 	{
-		click(sup);
+		click(Constant.DashboardConst.sup);
 		return driver.getCurrentUrl();
 	}
 
 	public String manUrl()
 	{
-		click(mancat);
+		click(Constant.DashboardConst.mancat);
 		return driver.getCurrentUrl();
 	}
 
 	public String manrUrl()
 	{
-		click(manu);
+		click(Constant.DashboardConst.manu);
 		return driver.getCurrentUrl();
 	}
 
 	public String autoUrl()
 	{
-		click(shor);
+		click(Constant.DashboardConst.shor);
 		return driver.getCurrentUrl();
 	}
 
@@ -483,60 +419,58 @@ public class Dashboard {
 	
 	public boolean dasImg()
 	{
-		return giveImgStatus(dimg);
+		return giveImgStatus(Constant.DashboardConst.dimg);
 	}
 	
 	public boolean annImg()
 	{
-		return giveImgStatus(aimg);
+		return giveImgStatus(Constant.DashboardConst.aimg);
 	}
 	
 	public boolean pollImg()
 	{
-		return giveImgStatus(pimg);
+		return giveImgStatus(Constant.DashboardConst.pimg);
 	}
 	
 	public boolean romcImg()
 	{
-		return giveImgStatus(rimg);
+		return giveImgStatus(Constant.DashboardConst.rimg);
 	}
 	
 	public boolean faqcImg()
 	{
-		return giveImgStatus(facimg);
+		return giveImgStatus(Constant.DashboardConst.facimg);
 	}
 	
 	public boolean faqImg()
 	{
-		return giveImgStatus(fqsimg);
+		return giveImgStatus(Constant.DashboardConst.fqsimg);
 	}
 	
 	public boolean supcImg()
 	{
-		return giveImgStatus(simg);
+		return giveImgStatus(Constant.DashboardConst.simg);
 	}
 	
 	public boolean supImg()
 	{
-		return giveImgStatus(supimg);
+		return giveImgStatus(Constant.DashboardConst.supimg);
 	}
 	
 	public boolean mancImg()
 	{
-		return giveImgStatus(manimg);
+		return giveImgStatus(Constant.DashboardConst.manimg);
 	}
 	
 	public boolean manuImg()
 	{
-		return giveImgStatus(mimg);
+		return giveImgStatus(Constant.DashboardConst.mimg);
 	}
 	
 	public boolean shorImg()
 	{
-		return giveImgStatus(shimg);
+		return giveImgStatus(Constant.DashboardConst.shimg);
 	}
-	
-	
 	
 	
 	

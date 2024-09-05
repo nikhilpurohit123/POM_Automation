@@ -1,137 +1,375 @@
 package page;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+
+import utility.Constant;
 
 public class Announcements {
 
-	WebDriver driver;
 	
-	private By annurl = By.xpath("http://146.59.87.38:8080/ghostnews/#/announcements");
-	private By annhead = By.xpath("//h4[normalize-space()='Announcements']");// page heading  outer heading 
-	private By addbtn = By.xpath("//button[normalize-space()='Add New']"); // 
-	private By leftarrow = By.xpath("//button[@class='btn-outline-primary btn btn-outline-primary']");
-	private By rightarrow = By.xpath("//button[@class='btn-outline-primary btn btn-outline-primary']");
-	private By middlecount = By.xpath("//button[contains(text(),'1')]");
-	
-	
-	private By headann = By.xpath("//div[@class='modal-header']");
-	private By type = By.xpath("//label[normalize-space()='Type']");
-	private By select = By.xpath("//select[@id='select']");
-	private By annTitle = By.xpath("//label[normalize-space()='Announcement Title']");
-	private By anntxtfiled = By.xpath("//input[@id='title']");
-	private By desc = By.xpath("//p[@class='mb-1']");
-	private By cancelbtn = By.xpath("//button[normalize-space()='Cancel']");
-	private By savebtn = By.xpath("//button[normalize-space()='Save']");
-	
-	
-	private By bold = By.xpath("//div[@title='Bold']");
-	private By italic = By.xpath("//div[@title='Italic']");
-	private By uderline = By.xpath("//div[@title='Underline']");
-	private By strick = By.xpath("//div[@title='Strikethrough']");
-	private By monos = By.xpath("//div[@title='Monospace']");
-	private By subscrip = By.xpath("//div[@title='Superscript']");
-	private By supscrip = By.xpath("//div[@title='Subscript']");
-	
-	
-	
-	
-	private By normal = By.xpath("//li[@class='rdw-dropdownoption-default rdw-dropdownoption-active ']");
-	private By h1  = By.xpath("//li[normalize-space()='H1']");
-	private By h2 = By.xpath("//li[normalize-space()='H2']");
-	private By h3 = By.xpath("//li[normalize-space()='H3']");
-	private By h4 = By.xpath("//li[normalize-space()='H4']");
-	private By h5 = By.xpath("//li[normalize-space()='H5']");
-	private By h6 = By.xpath("//li[normalize-space()='H6']");
-	private By block = By.xpath("//li[normalize-space()='Blockquote']");
-	private By code = By.xpath("//li[normalize-space()='Code']");
-	
-	
-	private By unorder = By.xpath("//div[@title='Unordered']");
-	private By order = By.xpath("//div[@title='Ordered']");
-	private By indent = By.xpath("//div[@title='Indent']");
-	private By outdent = By.xpath("//div[@title='Outdent']");
-	private By leftind = By.xpath("//div[@title='Left']");
-	private By center = By.xpath("//div[@title='Center']");
-	private By right = By.xpath("//div[@title='Right']");
-	private By justify = By.xpath("//div[@title='Justify']");
-	private By imoje = By.xpath("//div[@title='Emoji']//div[@class='rdw-option-wrapper']");
-	private By link = By.xpath("//div[@title='Link']");
-	private By unkink = By.xpath("//div[@title='Unlink']");
-	
-	
-	
-	private By descerror = By.xpath("//p[@class='error mb-2 mt-0 text-danger font-12']");
-	private By annfielderror = By.xpath("//div[normalize-space()='At least 3 characters should be there']");
-	private By anntypeerror = By.xpath("//div[normalize-space()='Please select announcement type']");
-	private By annfiedblank = By.xpath("//div[normalize-space()='Please enter title']");
-	
-	
-	
-	
-	
-	private By imo1 = By.xpath("//span[contains(text(),'😀')]");
-	private By imo2 = By.xpath("//span[contains(text(),'😍')]");
-	private By imo3 = By.xpath("//span[contains(text(),'😈')]");
-	
-	private By datanot = By.xpath("//img[@alt='No Data Found']");// when show data nor present 
-	private By odattxt = By.xpath("//p[normalize-space()='0 Data Found']");
-	
-	
-	private By donetxt = By.xpath("//div[@class='bg-light text-center modal-header']");
-	private By tickicon = By.xpath("//div[@class='p-4 text-center modal-body']//*[name()='svg']");
-	private By succtxt = By.xpath("//h4[normalize-space()='Successfully Done!']");
-	private By okbtn = By.xpath("//button[normalize-space()='Okay']");
-	
-	
-	private By threedot = By.xpath("//a[@id='react-aria8035856139-13']//i[@class='mdi mdi-dots-horizontal m-0 text-muted h3']");
-	private By timeinblock = By.xpath("//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/p[1]/small[1]");
-	private By updatetxt = By.xpath("//span[@class=\"badge bg-blue text-white mb-0\"]");
-	private By update_img  = By.xpath("//img[@src='/ghostnews/static/media/IconUpdate.fd11b2b9.svg']");
-	private By noticetxt = By.xpath("//span[@class='badge bg-danger text-white mb-0']");
-	private By notice_img = By.xpath("//img[@src='/ghostnews/static/media/IconNotice.192226dd.svg']");
-	
-	
-	private By editlink = By.xpath("//a[normalize-space()='Edit']");
-	private By delelink = By.xpath("//a[normalize-space()='Delete']");
-	private By edit_img = By.xpath("//i[contains(@class,'mdi mdi-pencil me-1')]");
-	private By delet_img = By.xpath("//i[@class='mdi mdi-delete me-1']");
- 	
-	
-	
-	
-	
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/	
-	
+	WebDriver driver;	
 	
 	
 	
 	public Announcements(WebDriver driver)
 	{
 		this.driver=driver;
+	}	
+	
+	
+	public void timegive(int time)
+	{
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
 	}
 	
-	public void click(By d)
+	
+	public void click(By d)                // used for clicking the element 
 	{
 		driver.findElement(d).click();
 	}
 			
-	public void clickOnAnn()
+	public void clickOnAnn()               // useing above click() for click on the 
 	{
-		click(annurl);
+		click(Constant.AnnouncementsConst.annlink);
+		
 	}
 	
-	public String url()
+	public String url()                    // used for the take the current url of the 
 	{
 		return driver.getCurrentUrl();
 	}
 	
-	public String annHeadingTxt()
+	public void scrolldown() throws AWTException // page down untill Bottom
 	{
-		return driver.findElement(annhead).getText();
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_PAGE_DOWN);
+	}
+	
+	public void scrollup() throws AWTException   // page up untill the top
+	{
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_PAGE_UP);
+	}
+	
+/* ############################################################################################################## */	
+
+	public boolean  annVisible()
+	{
+		return driver.findElement(Constant.AnnouncementsConst.annlink).isDisplayed();		
+	}
+	
+	public boolean annEnabled()
+	{
+		return driver.findElement(Constant.AnnouncementsConst.annlink).isEnabled();
+	}
+	
+	public boolean annNotSelect()
+	{
+		return driver.findElement(Constant.AnnouncementsConst.annlink).isSelected();
+	}
+	
+
+	
+/* ############################################################################################################## */	
+
+	// check the text of side nav links
+	
+	
+	public String dasTxt()
+	{
+		return driver.findElement(Constant.DashboardConst.das).getText();
+		
+	}
+
+	public String annTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.ann).getText();
+	}
+		
+	public String pollTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.poll).getText();
+	}
+	
+	public String romTxt()
+	{
+		return driver.findElement(Constant.DashboardConst.rom).getText();
+	}
+	
+	public String faqcTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.faqc).getText();
+	}
+		
+	public String fqsTxt() 
+	{		
+		
+		return driver.findElement(Constant.DashboardConst.fqs).getText();
+	}
+	    
+	public String supcatTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.supcat).getText();
+	}
+	
+	public String supTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.sup).getText();
+	}
+	
+	public String mancatTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.mancat).getText();
+	}
+	
+	public String manuTxt()
+	{
+		
+		return driver.findElement(Constant.DashboardConst.manu).getText();
+	}
+	
+	public String shorTxt() 
+	{	
+		return driver.findElement(Constant.DashboardConst.shor).getText();
+	}
+	
+
+/* ############################################################################################################## */
+	
+	
+	// icon visible heck 
+	
+	public boolean giveImgStatus(By d)
+	{
+		return driver.findElement(d).isDisplayed();
 	}
 	
 	
+	public boolean dasImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.dimg);
+	}
+	
+	public boolean annImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.aimg);
+	}
+	
+	public boolean pollImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.pimg);
+	}
+	
+	public boolean romcImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.rimg);
+	}
+	
+	public boolean faqcImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.facimg);
+	}
+	
+	public boolean faqImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.fqsimg);
+	}
+	
+	public boolean supcImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.simg);
+	}
+	
+	public boolean supImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.supimg);
+	}
+	
+	public boolean mancImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.manimg);
+	}
+	
+	public boolean manuImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.mimg);
+	}
+	
+	public boolean shorImg()
+	{
+		return giveImgStatus(Constant.DashboardConst.shimg);
+	}
+	
+/* ############################################################################################################## */			
+	
+		/* comparing the url end ponint */ 
+	
+	
+	public String dasUrl()
+	{
+		click(Constant.DashboardConst.das);
+		return driver.getCurrentUrl();
+	}
+	
+	public String annUrl()
+	{
+		click(Constant.DashboardConst.ann);
+		return driver.getCurrentUrl();
+	}
+
+	public String pollUrl()
+	{
+		click(Constant.DashboardConst.poll);
+		return driver.getCurrentUrl();
+	}
+
+	public String romcUrl()
+	{
+		click(Constant.DashboardConst.rom);
+		return driver.getCurrentUrl();
+	}
+
+	public String faqcUrl()
+	{
+		click(Constant.DashboardConst.faqc);
+		return driver.getCurrentUrl();
+	}
+
+	public String faqsUrl()
+	{
+		click(Constant.DashboardConst.fqs);
+		return driver.getCurrentUrl();
+	}
+
+	public String supcUrl()
+	{
+		click(Constant.DashboardConst.supcat);
+		return driver.getCurrentUrl();
+	}
+
+	public String supUrl()
+	{
+		click(Constant.DashboardConst.sup);
+		return driver.getCurrentUrl();
+	}
+
+	public String manUrl()
+	{
+		click(Constant.DashboardConst.mancat);
+		return driver.getCurrentUrl();
+	}
+
+	public String manrUrl()
+	{
+		click(Constant.DashboardConst.manu);
+		return driver.getCurrentUrl();
+	}
+
+	public String autoUrl()
+	{
+		click(Constant.DashboardConst.shor);
+		return driver.getCurrentUrl();
+	}
+
+	
+/* ############################################################################################################## */			
+
+	// fotter link of the page 
+	
+	
+	public String annHeadingTxt()          // take the heading of the announcement 
+	{
+		return driver.findElement(Constant.AnnouncementsConst.annhead).getText();
+	}
+	
+	public String footTxt()
+	{
+		return driver.findElement(Constant.DashboardConst.foot).getText();
+	}
+	
+	public boolean ghostFootLink()
+	{
+		return driver.findElement(Constant.DashboardConst.glink).isDisplayed();
+	}
+	
+/* ############################################################################################################## */		
+	
+	// menu related operation 
+	
+	public boolean menuVisible()
+	{
+		return driver.findElement(Constant.DashboardConst.menubtn).isDisplayed();
+	}
+	
+	
+	public boolean menuEnable()
+	{
+		return driver.findElement(Constant.DashboardConst.menubtn).isEnabled();
+	}
+	
+	
+	public void clickMenu()
+	{
+		click(Constant.DashboardConst.menubtn);
+	}
+	
+	
+/* ############################################################################################################## */	
+
+	// side ghost logo
+	
+	public boolean ghostLogoVisible()
+	{
+		System.out.println(driver.findElement(Constant.DashboardConst.logo).isDisplayed());
+		return driver.findElement(Constant.DashboardConst.logo).isDisplayed();
+	}
+	
+	public boolean ghostLogoEnable() 
+	{
+		return driver.findElement(Constant.DashboardConst.logo).isEnabled();
+	}
+	
+	public void ghostLogoClickable()
+	{
+		 click(Constant.DashboardConst.logo);
+	}
+	
+/* ############################################################################################################## */		
+
+// category 
+	
+	
+
+	public boolean categoryimg()// test pannel cantain  image
+	{
+		return driver.findElement(Constant.DashboardConst.cat).isDisplayed();	
+		
+	}
+	
+	public boolean catimgEnabled()// test pannel cantain  image uper logo
+	{
+		return driver.findElement(Constant.DashboardConst.cat).isEnabled();
+		
+	}
+	
+	
+	public void catgePanelClick()
+	{
+		click(Constant.DashboardConst.cat);
+	}
 	
 	
 }

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>42/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 24 17:44:43 IST 2024</td>
+<td>Started on:</td><td>Thu Sep 05 15:37:40 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (390 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15424 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.TestCases.start()'><b>start</b><br>Test class: test.TestCases</td>
-<td><div><pre>java.lang.IllegalMonitorStateException: current thread is not owner
-	at java.base/java.lang.Object.wait0(Native Method)
-	at java.base/java.lang.Object.wait(Object.java:366)
-	at java.base/java.lang.Object.wait(Object.java:488)
-	at test.TestCases.start(TestCases.java:23)
+<td title='test.AnnouncementsTest.ghostLogoClick()'><b>ghostLogoClick</b><br>Test class: test.AnnouncementsTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=128.0.6613.119)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fac67e74eae66be31d70d7bff24ac64c, clickElement {id=f.7E904B31546986AAD0071E8A2A37F629.d.4053F797D0D0E485921BF39089490CEA.e.99}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.119, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64252/devtoo..., se:cdpVersion: 128.0.6613.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fac67e74eae66be31d70d7bff24ac64c)] -&gt; xpath: //a[@class=&apos;logo logo-light text-center&apos;]//span[@class=&apos;logo-lg&apos;]]
+Session ID: fac67e74eae66be31d70d7bff24ac64c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at page.Announcements.click(Announcements.java:35)
+	at page.Announcements.ghostLogoClickable(Announcements.java:335)
+	at test.AnnouncementsTest.ghostLogoClick(AnnouncementsTest.java:330)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -107,12 +126,101 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace817689537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace817689537'><pre>java.lang.IllegalMonitorStateException: current thread is not owner
-	at java.base/java.lang.Object.wait0(Native Method)
-	at java.base/java.lang.Object.wait(Object.java:366)
-	at java.base/java.lang.Object.wait(Object.java:488)
-	at test.TestCases.start(TestCases.java:23)
+</pre></div><a href='#' onClick='toggleBox("stack-trace131037934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace131037934'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=128.0.6613.119)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fac67e74eae66be31d70d7bff24ac64c, clickElement {id=f.7E904B31546986AAD0071E8A2A37F629.d.4053F797D0D0E485921BF39089490CEA.e.99}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.119, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64252/devtoo..., se:cdpVersion: 128.0.6613.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fac67e74eae66be31d70d7bff24ac64c)] -&gt; xpath: //a[@class=&apos;logo logo-light text-center&apos;]//span[@class=&apos;logo-lg&apos;]]
+Session ID: fac67e74eae66be31d70d7bff24ac64c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at page.Announcements.click(Announcements.java:35)
+	at page.Announcements.ghostLogoClickable(Announcements.java:335)
+	at test.AnnouncementsTest.ghostLogoClick(AnnouncementsTest.java:330)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.clickGhostLogoVisible()'><b>clickGhostLogoVisible</b><br>Test class: test.AnnouncementsTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at test.AnnouncementsTest.clickGhostLogoVisible(AnnouncementsTest.java:317)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1627496281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1627496281'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at test.AnnouncementsTest.clickGhostLogoVisible(AnnouncementsTest.java:317)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -141,7 +249,225 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>test.TestCases@8dbdac1</td></tr>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.AnnouncementsTest.supIconCheck()'><b>supIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.dasIconCheck()'><b>dasIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.mancUrlCheck()'><b>mancUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.supcSideNavTxtMatch()'><b>supcSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.pollIconCheck()'><b>pollIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.supSideNavTxtMatch()'><b>supSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.faqcUrlCheck()'><b>faqcUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.supUrlCheck()'><b>supUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.faqSideNavTxtMatch()'><b>faqSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.manrUrlCheck()'><b>manrUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.faqUrlCheck()'><b>faqUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.pollSideNavTxtMatch()'><b>pollSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.ghostLogoEnable()'><b>ghostLogoEnable</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.supcUrlCheck()'><b>supcUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.romSideNavTxtMatch()'><b>romSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.pollUrlCheck()'><b>pollUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.romcUrlCheck()'><b>romcUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.mancSideNavTxtMatch()'><b>mancSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.faqIconCheck()'><b>faqIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.annSideNavTxtMatch()'><b>annSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.autoUrlCheck()'><b>autoUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.manrSideNavTxtMatch()'><b>manrSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.manIconCheck()'><b>manIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.footerTxtCheck()'><b>footerTxtCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.annIconCheck()'><b>annIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.setupLogin()'><b>setupLogin</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>3</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.shortSideNavTxtMatch()'><b>shortSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.annUrlCheck()'><b>annUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.menubtnClick()'><b>menubtnClick</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.romcIconCheck()'><b>romcIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.autorIconCheck()'><b>autorIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.dasUrlCheck()'><b>dasUrlCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.menubtnVisible()'><b>menubtnVisible</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.dasSideNavTxtMatch()'><b>dasSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.footerTxtVisivle()'><b>footerTxtVisivle</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.annHeadingCkeck()'><b>annHeadingCkeck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>4</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.checkUrl()'><b>checkUrl</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.faqcIconCheck()'><b>faqcIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.mancIconCheck()'><b>mancIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.faqcSideNavTxtMatch()'><b>faqcSideNavTxtMatch</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.supcIconCheck()'><b>supcIconCheck</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
+<tr>
+<td title='test.AnnouncementsTest.menubtnEnabled()'><b>menubtnEnabled</b><br>Test class: test.AnnouncementsTest</td>
+<td></td>
+<td>0</td>
+<td>test.AnnouncementsTest@52bf72b5</td></tr>
 </table><p>
 </body>
 </html>
